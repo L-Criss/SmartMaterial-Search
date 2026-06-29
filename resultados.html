@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMaterial - Resultados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { background-color: #0f172a; min-height: 100vh; color: white; }
+        .sidebar .nav-link { color: #94a3b8; border-radius: 8px; margin-bottom: 8px; font-weight: 500; }
+        .sidebar .nav-link:hover { color: white; background-color: #1e293b; }
+        .sidebar .nav-link.active { background-color: #2563eb; color: white; }
+        .query-badge { background-color: #eff6ff; border: 1px solid #dbeafe; border-radius: 8px; color: #2563eb; font-weight: 500; }
+        .table-container { background-color: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .badge-existente { background-color: #dcfce7; color: #166534; font-weight: 600; }
+        .badge-similar { background-color: #fef3c7; color: #92400e; font-weight: 600; }
+        .alert-duplicate { background-color: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2 sidebar p-3 d-flex flex-column justify-content-between">
+            <div>
+                <h4 class="px-2 mb-4 fw-bold border-start border-3 border-info">SmartMaterial</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door me-2"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="resultados.html" class="nav-link active"><i class="bi bi-search me-2"></i> Búsqueda</a></li>
+                    <li class="nav-item"><a href="historial.html" class="nav-link"><i class="bi bi-clock-history me-2"></i> Historial</a></li>
+                    <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="bi bi-box-seam me-2"></i> Materiales</a></li>
+                </ul>
+            </div>
+            <div class="text-muted px-2 small"><i class="bi bi-person-circle me-2"></i> Analista</div>
+        </div>
+
+        <div class="col-md-9 col-lg-10 p-5">
+            <h2 class="fw-bold text-dark mb-3">Resultados encontrados</h2>
+            
+            <div class="query-badge p-3 mb-4 d-flex align-items-center">
+                <span class="text-muted me-2">Búsqueda:</span>
+                <strong>Válvula de bola acero inoxidable 2" clase 150 rosca NPT</strong>
+            </div>
+
+            <div class="table-container shadow-sm mb-4">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light text-secondary">
+                        <tr>
+                            <th class="ps-4">Similitud</th>
+                            <th>Código SAP</th>
+                            <th>Descripción</th>
+                            <th class="pe-4">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ps-4 fw-bold text-dark">85%</td>
+                            <td><code class="text-secondary">COD-45892</code></td>
+                            <td>Válvula de bola acero inox. 2" clase 150...</td>
+                            <td class="pe-4"><span class="badge badge-existente px-2 py-1">Existente</span></td>
+                        </tr>
+                        <tr>
+                            <td class="ps-4 fw-bold text-dark">82%</td>
+                            <td><code class="text-secondary">COD-47851</code></td>
+                            <td>Válvula bola inox. 2" 150# rosca NPT</td>
+                            <td class="pe-4"><span class="badge badge-existente px-2 py-1">Existente</span></td>
+                        </tr>
+                        <tr>
+                            <td class="ps-4 fw-bold text-dark">71%</td>
+                            <td><code class="text-secondary">COD-51230</code></td>
+                            <td>Válvula esférica acero inox 2 pulgadas...</td>
+                            <td class="pe-4"><span class="badge badge-similar px-2 py-1">Similar</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert-duplicate p-3 d-flex justify-content-between align-items-center shadow-sm">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-exclamation-triangle-fill text-warning fs-4 me-3"></i>
+                    <div>
+                        <strong class="text-dark d-block">Posible material duplicado detectado</strong>
+                        <span class="text-muted small">Revisa los resultados detallados antes de proceder a crear un registro nuevo en el sistema.</span>
+                    </div>
+                </div>
+                <a href="detalle.html" class="btn btn-outline-dark btn-sm fw-bold px-3 py-2" style="border-radius: 8px;">Ver detalles</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

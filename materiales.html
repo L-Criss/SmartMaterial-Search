@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMaterial - Catálogo Maestro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { background-color: #0f172a; min-height: 100vh; color: white; }
+        .sidebar .nav-link { color: #94a3b8; border-radius: 8px; margin-bottom: 8px; font-weight: 500; }
+        .sidebar .nav-link:hover { color: white; background-color: #1e293b; }
+        .sidebar .nav-link.active { background-color: #2563eb; color: white; }
+        .card-catalog { border: none; border-radius: 12px; background-color: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .badge-category { background-color: #f1f5f9; color: #475569; font-weight: 600; border: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2 sidebar p-3 d-flex flex-column justify-content-between">
+            <div>
+                <h4 class="px-2 mb-4 fw-bold border-start border-3 border-info">SmartMaterial</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door me-2"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="resultados.html" class="nav-link"><i class="bi bi-search me-2"></i> Búsqueda</a></li>
+                    <li class="nav-item"><a href="historial.html" class="nav-link"><i class="bi bi-clock-history me-2"></i> Historial</a></li>
+                    <li class="nav-item"><a href="materiales.html" class="nav-link active"><i class="bi bi-box-seam me-2"></i> Materiales</a></li>
+                </ul>
+            </div>
+            <div class="text-muted px-2 small"><i class="bi bi-person-circle me-2"></i> Analista</div>
+        </div>
+
+        <div class="col-md-9 col-lg-10 p-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold text-dark mb-1">Catálogo Maestro de Datos</h2>
+                    <p class="text-muted mb-0">Inventario optimizado, estandarizado e indexado por el motor de Inteligencia Artificial.</p>
+                </div>
+                <button class="btn btn-outline-primary btn-sm fw-semibold"><i class="bi bi-arrow-repeat me-2"></i>Sincronizar ERP</button>
+            </div>
+
+            <div class="card-catalog p-3 shadow-sm border">
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle mb-0">
+                        <thead class="table-light text-secondary">
+                            <tr>
+                                <th class="ps-3">Código SKU</th>
+                                <th>Descripción Estandarizada</th>
+                                <th>Categoría</th>
+                                <th>Atributos Críticos</th>
+                                <th class="pe-3">Precio Base</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-3"><code>COD-45892</code></td>
+                                <td class="fw-semibold text-dark">VÁLVULA DE BOLA ACERO INOXIDABLE 316 2" CLASS 150 NPT</td>
+                                <td><span class="badge badge-category px-2 py-1">Válvulas</span></td>
+                                <td><small class="text-muted">Diám: 2" | Mat: SS316 | Pres: 150#</small></td>
+                                <td class="pe-3 fw-bold text-primary">$120.00 USD</td>
+                            </tr>
+                            <tr>
+                                <td><code>COD-47851</code></td>
+                                <td class="fw-semibold text-dark">VÁLVULA DE BOLA ACERO INOXIDABLE 316 2" CLASS 150 FLANGED</td>
+                                <td><span class="badge badge-category px-2 py-1">Válvulas</span></td>
+                                <td><small class="text-muted">Diám: 2" | Mat: SS316 | Pres: 150#</small></td>
+                                <td class="pe-3 fw-bold text-primary">$145.00 USD</td>
+                            </tr>
+                            <tr>
+                                <td><code>COD-99121</code></td>
+                                <td class="fw-semibold text-dark">TUBERÍA DE ACERO AL CARBONO SCH 40 2" A106-B</td>
+                                <td><span class="badge badge-category px-2 py-1">Tuberías</span></td>
+                                <td><small class="text-muted">Diám: 2" | Mat: CS | Espesor: SCH40</small></td>
+                                <td class="pe-3 fw-bold text-primary">$45.50 USD</td>
+                            </tr>
+                            <tr>
+                                <td><code>COD-33104</code></td>
+                                <td class="fw-semibold text-dark">BRIDA CUELLO SOLDABLE (WN) 4" CLASS 300 RF A105</td>
+                                <td><span class="badge badge-category px-2 py-1">Bridas</span></td>
+                                <td><small class="text-muted">Diám: 4" | Mat: CS | Cara: RF</small></td>
+                                <td class="pe-3 fw-bold text-primary">$68.00 USD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

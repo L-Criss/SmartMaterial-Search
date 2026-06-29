@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartMaterial - Historial y Calidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f8fafc; font-family: 'Segoe UI', sans-serif; }
+        .sidebar { background-color: #0f172a; min-height: 100vh; color: white; }
+        .sidebar .nav-link { color: #94a3b8; border-radius: 8px; margin-bottom: 8px; }
+        .sidebar .nav-link.active { background-color: #2563eb; color: white; }
+        .card { border: none; border-radius: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2 sidebar p-3 d-flex flex-column justify-content-between">
+            <div>
+                <h4 class="px-2 mb-4 border-start border-3 border-info">SmartMaterial</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door me-2"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="resultados.html" class="nav-link"><i class="bi bi-search me-2"></i> Búsqueda</a></li>
+                    <li class="nav-item"><a href="historial.html" class="nav-link active"><i class="bi bi-clock-history me-2"></i> Historial</a></li>
+                    <li class="nav-item"><a href="materiales.html" class="nav-link"><i class="bi bi-box-seam me-2"></i> Materiales</a></li>
+                </ul>
+            </div>
+            <div class="text-muted px-2"><i class="bi bi-person-circle me-2"></i> Analista</div>
+        </div>
+
+        <div class="col-md-9 col-lg-10 p-4">
+            <h3 class="fw-bold mb-1">Historial de Consultas y Curaduría</h3>
+            <p class="text-muted mb-4">Registro de búsquedas semánticas y el feedback enviado al motor de aprendizaje (Learning Service).</p>
+
+            <div class="card p-3 shadow-sm">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Fecha/Hora</th>
+                                <th>Término Buscado</th>
+                                <th>Código Asignado</th>
+                                <th>Estado Validación</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>28/06/2026 14:22</td>
+                                <td class="text-truncate" style="max-width: 250px;"><code>VALV BF SS316 2 CL150</code></td>
+                                <td><span class="badge bg-light text-dark">COD-45892</span></td>
+                                <td><span class="badge bg-success-subtle text-success p-2"><i class="bi bi-check-circle-fill me-1"></i> Aceptado por Usuario</span></td>
+                                <td><button class="btn btn-sm btn-outline-secondary">Revisar</button></td>
+                            </tr>
+                            <tr>
+                                <td>28/06/2026 11:05</td>
+                                <td class="text-truncate" style="max-width: 250px;"><code>PIPE 2 SCH40 ASTM A106</code></td>
+                                <td><span class="badge bg-light text-dark">COD-99121</span></td>
+                                <td><span class="badge bg-warning-subtle text-warning p-2"><i class="bi bi-exclamation-triangle-fill me-1"></i> Corregido Manual</span></td>
+                                <td><button class="btn btn-sm btn-primary">Ver Ajuste</button></td>
+                            </tr>
+                            <tr>
+                                <td>27/06/2026 17:40</td>
+                                <td class="text-truncate" style="max-width: 250px;"><code>PUMP SS316 5HP CENTRIFUGAL</code></td>
+                                <td><span class="text-danger">Nuevo Registro</span></td>
+                                <td><span class="badge bg-danger-subtle text-danger p-2"><i class="bi bi-plus-circle-fill me-1"></i> Duplicado Descartado</span></td>
+                                <td><button class="btn btn-sm btn-outline-secondary">Revisar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
